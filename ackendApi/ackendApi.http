@@ -1,0 +1,6 @@
+@ackendApi_HostAddress = http://localhost:5225
+
+GET {{ackendApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

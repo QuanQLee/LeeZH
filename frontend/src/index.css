@@ -1,0 +1,56 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 视差页面背景留白 */
+.parallax-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Scroll‑Timeline 进度条 --- */
+@scroll-timeline fill-line {
+    scroll-offsets: selector(.timeline) cover 0% cover 100%;
+}
+
+.timeline::before,
+.timeline::after {
+    @apply absolute left-1/2 -translate-x-1/2 w-1 rounded;
+    content: "";
+}
+
+.timeline::before {
+    top: 0;
+    bottom: 0;
+    @apply bg-slate-300;
+}
+
+.timeline::after {
+    top: 0;
+    @apply bg-primary;
+    animation: grow linear;
+    animation-timeline: fill-line;
+}
+
+@keyframes grow {
+    from {
+        height: 0
+    }
+
+    to {
+        height: 100%
+    }
+}
+
+/* Scroll Snap  */
+.timeline {
+    scroll-snap-type: y mandatory;
+}
+
+    .timeline .vertical-timeline-element {
+        scroll-snap-align: start;
+    }
