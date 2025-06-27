@@ -67,7 +67,7 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
                         Download Resume
                     </a>
                 )}
-                <p className="text-sm opacity-90">Email: 309919702@qq.com | WeChat: The_5656</p>
+                <p className="text-sm opacity-90">Email: lizhihong268810@gmail.com | X（twitter）: Leezhbb</p>
             </div>
         </div>
     );
