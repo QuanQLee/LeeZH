@@ -1,13 +1,13 @@
-﻿// src/components/ParallaxBanner.tsx
+// src/components/ParallaxBanner.tsx
 
 import React, { useEffect, useState } from 'react';
 
-// 1. props 类型声明（必须！）
+// Prop types (required)
 interface ParallaxBannerProps {
-    src: string;             // 背景图片地址
-    className?: string;      // 可选：自定义 class
-    fit?: 'cover' | 'contain'; // 背景适应方式
-    disableFixed?: boolean;  // 在移动端禁用 fixed 背景
+    src: string;             // background image URL
+    className?: string;      // optional custom class
+    fit?: 'cover' | 'contain'; // background fit mode
+    disableFixed?: boolean;  // disable fixed background on mobile
 }
 
 export default function ParallaxBanner({ src, className, fit = 'cover', disableFixed }: ParallaxBannerProps) {

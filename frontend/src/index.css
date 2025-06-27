@@ -6,13 +6,13 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 视差页面背景留白 */
+/* Parallax page spacing */
 .parallax-wrapper {
     position: relative;
     overflow: hidden;
 }
 
-/* --- Scroll‑Timeline 进度条 --- */
+/* --- Scroll‑Timeline progress bar --- */
 @scroll-timeline fill-line {
     scroll-offsets: selector(.timeline) cover 0% cover 100%;
 }

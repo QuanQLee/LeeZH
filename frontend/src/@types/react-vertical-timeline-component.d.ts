@@ -1,4 +1,4 @@
-﻿/* frontend/src/@types/react-vertical-timeline-component.d.ts */
+/* frontend/src/@types/react-vertical-timeline-component.d.ts */
 
 declare module 'react-vertical-timeline-component' {
     import * as React from 'react';
