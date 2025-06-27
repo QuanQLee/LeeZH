@@ -1,4 +1,4 @@
-﻿/* TimelinePage.tsx — v3.3 完整图片支持 */
+/* TimelinePage.tsx — v3.3 full image support */
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -57,12 +57,12 @@ export default function TimelinePage() {
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                项目时间线
+                Project Timeline
             </motion.h1>
 
             <input
                 type="text"
-                placeholder="搜索事件..."
+                placeholder="Search events..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                 className="mb-12 block w-full sm:max-w-xs p-2 border border-slate-300 rounded"
@@ -109,10 +109,10 @@ export default function TimelinePage() {
                                         navigate(`/event/${e.id}`);
                                     }
                                 }}
-                                aria-label={`查看「${e.title}」详情`}
+                                aria-label={`View details of "${e.title}"`}
                             >
                                 <Markdown>{`### ${e.title}\n\n${e.description}`}</Markdown>
-                                {/* 新增：每条项目配图 */}
+                                {/* new: image per event */}
                                 {e.image && (
                                     <img
                                         src={e.image}

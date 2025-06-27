@@ -34,14 +34,14 @@ export default function ImageCarousel({ images, interval = 1500 }: Props) {
                     <button
                         onClick={prev}
                         className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 rounded-full"
-                        aria-label="上一张"
+                        aria-label="Previous"
                     >
                         <ChevronLeftIcon className="w-6 h-6" />
                     </button>
                     <button
                         onClick={next}
                         className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 rounded-full"
-                        aria-label="下一张"
+                        aria-label="Next"
                     >
                         <ChevronRightIcon className="w-6 h-6" />
                     </button>

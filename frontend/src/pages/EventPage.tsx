@@ -7,7 +7,7 @@ import ImageCarousel from '../components/ImageCarousel';
 export default function EventPage() {
     const { id } = useParams();
     const evt = events.find(e => e.id === id);
-    if (!evt) return <p className="p-6">事件不存在 <Link to="/timeline" className="underline">返回</Link></p>;
+    if (!evt) return <p className="p-6">Event not found <Link to="/timeline" className="underline">Back</Link></p>;
     return (
         <article className="min-h-screen bg-slate-50 dark:bg-slate-900">
             {evt.cover && (
@@ -28,7 +28,7 @@ export default function EventPage() {
                 <p className="mb-8 text-slate-500 dark:text-slate-400">{evt.date}</p>
                 {evt.images && <ImageCarousel images={evt.images} />}
                 <Markdown>{evt.description}</Markdown>
-                <Link to="/timeline" className="block mt-12 text-primary underline">← 返回时间轴</Link>
+                <Link to="/timeline" className="block mt-12 text-primary underline">← Back to Timeline</Link>
             </div>
         </article>
     );
